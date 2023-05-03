@@ -23,5 +23,5 @@ EXPOSE 8501
 
 COPY . .
 
-CMD [ "streamlit", "run", "main.py"]
+CMD [ "streamlit", "run", "str.py"]
 
