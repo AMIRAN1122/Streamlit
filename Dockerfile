@@ -1,4 +1,4 @@
-FROM python:3.9-slim
+FROM python:3.8-slim
 
 WORKDIR /app
 
@@ -9,7 +9,7 @@ RUN apt-get update && apt-get install -y \
     git \
     && rm -rf /var/lib/apt/lists/*
 
-RUN git clone https://github.com/AMIRAN1122/Streamlit.git .
+RUN git clone https://github.com/AMIRAN1122/Streamlit.git
 
 RUN pip3 install -r requirements.txt
 
