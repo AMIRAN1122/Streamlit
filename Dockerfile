@@ -1,26 +1,22 @@
-FROM python:3.8
+# app/Dockerfile
 
-WORKDIR /usr/src/app
+FROM python:3.8-slim
 
-COPY requirements.txt .
+WORKDIR /app
 
-RUN pip install --no-cache-dir --upgrade pip && \
-    pip install --no-cache-dir -r requirements.txt
+RUN apt-get update && apt-get install -y \
+    build-essential \
+    curl \
+    software-properties-common \
+    git \
+    && rm -rf /var/lib/apt/lists/*
 
-# streamlit-specific commands
-RUN mkdir -p /root/.streamlit
-RUN bash -c 'echo -e "\
-[general]\n\
-email = \"\"\n\
-" > /root/.streamlit/credentials.toml'
-RUN bash -c 'echo -e "\
-[server]\n\
-enableCORS = false\n\
-" > /root/.streamlit/config.toml'
+RUN git clone https://github.com/streamlit/streamlit-example.git .
 
-# exposing default port for streamlit
+RUN pip3 install -r requirements.txt
+
 EXPOSE 8501
 
-COPY . .
+HEALTHCHECK CMD curl --fail http://localhost:8501/_stcore/health
 
-CMD [ "streamlit", "run", "str.py"]
+ENTRYPOINT ["streamlit", "run", "str.py", "--server.port=8501", "--server.address=0.0.0.0"]
