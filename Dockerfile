@@ -14,6 +14,6 @@ RUN pip install --upgrade pip && \
 EXPOSE 8501
 
 # Run the command to start Streamlit when the container starts
-CMD ["streamlit", "run", "str.py", "--server.port", "8501"]
+CMD ["streamlit", "run", "st.py", "--server.port", "8501"]
 
 
