@@ -1,20 +1,19 @@
-FROM python:3.9-slim
+FROM python:3.8-slim-buster
 
+# Set the working directory to /app
 WORKDIR /app
 
-RUN apt-get update && apt-get install -y \
-    build-essential \
-    curl \
-    software-properties-common \
-    git \
-    && rm -rf /var/lib/apt/lists/*
+# Copy the requirements file into the container at /app
+COPY requirements.txt .
 
-RUN git clone https://github.com/streamlit/streamlit-example.git .
+# Install any necessary dependencies
+RUN pip install --upgrade pip && \
+    pip install --no-cache-dir -r requirements.txt
 
-RUN pip3 install -r requirements.txt
-
+# Expose port 8501 for Streamlit
 EXPOSE 8501
 
-HEALTHCHECK CMD curl --fail http://localhost:8501/_stcore/health
+# Run the command to start Streamlit when the container starts
+CMD ["streamlit", "run", "str.py", "--server.port", "8501"]
 
-ENTRYPOINT ["streamlit", "run", "str.py", "--server.port=8501", "--server.address=0.0.0.0"]
+
