@@ -45,7 +45,7 @@ if st.button(label="Start"):
     chrome_options.add_argument('--no-sandbox')
 
     driver = webdriver.Remote(
-        command_executor='https://<https://red.iran.liara.run>/webdriver',
+        command_executor='https://<red.iran.liara.run>/webdriver',
         desired_capabilities=chrome_capabilities,
         options=chrome_options
 )
