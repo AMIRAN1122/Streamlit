@@ -49,4 +49,14 @@ if st.button(label="Start"):
         desired_capabilities=chrome_capabilities,
         options=chrome_options
 )
+    
+    driver.get("https://snapinsta.app/")
+    
+    time.sleep(10)
+    
+    driver.save_screenshot("image.png")
+    
+    image = Image.open("image.png")
+    
+    st.image(image, caption='This is for you')
 
