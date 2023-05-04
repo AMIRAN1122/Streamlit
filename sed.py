@@ -61,4 +61,3 @@ if st.button(label="Start"):
     image = Image.open("image.png")
     
     st.image(image, caption='This is for you')
-
