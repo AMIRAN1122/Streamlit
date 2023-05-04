@@ -50,7 +50,7 @@ if st.button(label="Start"):
         options=chrome_options
 )
     
-    driver.get("https://snapinsta.app/")
+    driver.get("https://google.com/")
     
     time.sleep(10)
     
