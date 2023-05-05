@@ -39,7 +39,7 @@ if st.button(label="Start"):
 
 
     chrome_capabilities = webdriver.DesiredCapabilities.CHROME.copy()
-    chrome_capabilities['browserless:token'] = 'WR2t4sKXbSX0h'
+    chrome_capabilities['browserless:token', 'WR2t4sKXbSX0h']
     chrome_capabilities['goog:chromeOptions'] = {
         'args': [
             '--headless',
