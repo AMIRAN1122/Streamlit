@@ -48,7 +48,7 @@ if st.button(label="Start"):
     }
 
     driver = webdriver.Remote(
-        command_executor='https://chrome-pyjbqmuda.iran.liara.run/webdriver',
+        command_executor='https://chrome-pyjbqmuda.iran.liara.run',
         desired_capabilities=chrome_capabilities
     )
 
