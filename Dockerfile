@@ -19,11 +19,11 @@ enableCORS = false\n\
 " > /root/.streamlit/config.toml'
 
 # exposing default port for streamlit
-EXPOSE 4444
+EXPOSE 80
 
 COPY . .
 
-CMD [ "streamlit", "run", "sed.py", "--server.port", "4444"]
+CMD [ "streamlit", "run", "sed.py", "--server.port", "80"]
 
 # -------------------
 
