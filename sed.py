@@ -36,16 +36,20 @@ if st.button(label="Start"):
     
 #     st.image(image, caption='This is for you')  
 
-    chrome_capabilities = webdriver.DesiredCapabilities.CHROME.copy()
-    chrome_capabilities['browserless.token'] = 'WR2t4sKXbSX0h'
-    chrome_options = webdriver.ChromeOptions()
-    chrome_options.add_argument('--headless')
-    chrome_options.add_argument('--no-sandbox')
+    
+    chrome_capabilities = {
+    'browserless.token': 'WR2t4sKXbSX0h',
+    'goog:chromeOptions': {
+        'args': [
+            '--headless',
+            '--no-sandbox'
+            ]
+        }
+    }
 
     driver = webdriver.Remote(
         command_executor='https://chrome-pyjbqmuda.iran.liara.run/webdriver',
-        desired_capabilities=chrome_capabilities,
-        options=chrome_options
+        desired_capabilities=chrome_capabilities
     )
 
     driver.get("https://www.digikala.com/")
