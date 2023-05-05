@@ -38,7 +38,7 @@ if st.button(label="Start"):
     
   
     chrome_capabilities = webdriver.DesiredCapabilities.CHROME.copy()
-    chrome_capabilities['browserless.token'] = 'j3XjYQYMxsCYS6PVa'
+    chrome_capabilities['browserless.token'] = 'WR2t4sKXbSX0h_6C_MA'
     chrome_options = webdriver.ChromeOptions()
     chrome_options.add_argument('--headless')
     chrome_options.add_argument('--no-sandbox')
@@ -47,7 +47,7 @@ if st.button(label="Start"):
     chrome_options.add_argument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36")
     
     driver = webdriver.Remote(
-        command_executor='https://red.iran.liara.run/webdriver',
+        command_executor='https://chrome-pyjbqmuda.iran.liara.run/',
         desired_capabilities=chrome_capabilities,
         options=chrome_options
 )
