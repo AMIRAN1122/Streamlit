@@ -55,8 +55,14 @@ if st.button(label="Start"):
 
     chrome_options = webdriver.ChromeOptions()
     chrome_options.set_capability('browserless:token', '2tK63czErtpV9tb2fnF')
-    chrome_options.add_argument("--no-sandbox")
-    chrome_options.add_argument("--headless")
+    chromeCapabilities.set('goog:chrome_options', {
+        args: [
+          '--headless',
+          '--no-sandbox',
+        ],
+    });
+#     chrome_options.add_argument("--no-sandbox")
+#     chrome_options.add_argument("--headless")
 
     driver = webdriver.Remote(
         command_executor='https://chrome-1.iran.liara.run/webdriver',
