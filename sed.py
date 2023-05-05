@@ -53,10 +53,8 @@ if st.button(label="Start"):
 #     )
 
 
-    from selenium import webdriver
-
     chrome_options = webdriver.ChromeOptions()
-    chrome_options.set_capability('browserless:token', 'WR2t4sKXbSX0h')
+    chrome_options.set_capability('browserless:token', '2tK63czErtpV9tb2fnF')
     chrome_options.add_argument("--no-sandbox")
     chrome_options.add_argument("--headless")
 
