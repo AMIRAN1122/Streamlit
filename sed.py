@@ -61,7 +61,7 @@ if st.button(label="Start"):
     chrome_options.add_argument("--headless")
 
     driver = webdriver.Remote(
-        command_executor='https://chrome-pyjbqmuda.iran.liara.run',
+        command_executor='https://chrome-pyjbqmuda.iran.liara.run/webdriver',
         options=chrome_options
     )
 
