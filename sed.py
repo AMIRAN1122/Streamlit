@@ -38,7 +38,7 @@ if st.button(label="Start"):
 
     
     chrome_capabilities = {
-    'browserless.token': 'WR2t4sKXbSX0h',
+    'browserless:token': 'WR2t4sKXbSX0h',
     'goog:chromeOptions': {
         'args': [
             '--headless',
