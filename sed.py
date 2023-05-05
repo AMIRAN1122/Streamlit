@@ -55,7 +55,7 @@ if st.button(label="Start"):
 
     chrome_options = webdriver.ChromeOptions()
     chrome_options.set_capability('browserless:token', '2tK63czErtpV9tb2fnF')
-    chromeCapabilities.set('goog:chrome_options', {
+    chrome_options.set_capability('goog:chrome_options', {
         args: [
           '--headless',
           '--no-sandbox',
