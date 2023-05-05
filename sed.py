@@ -36,10 +36,8 @@ if st.button(label="Start"):
     
 #     st.image(image, caption='This is for you')  
     
-
-
     chrome_capabilities = webdriver.DesiredCapabilities.CHROME.copy()
-    chrome_capabilities['browserless:token', 'WR2t4sKXbSX0h']
+    chrome_capabilities['browserless:token'] = 'WR2t4sKXbSX0h'
     chrome_capabilities['goog:chromeOptions'] = {
         'args': [
             '--headless',
@@ -55,6 +53,7 @@ if st.button(label="Start"):
         keep_alive=False,
         file_detector=None
     )
+
 
     driver.get("https://www.digikala.com/")
     
