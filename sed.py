@@ -38,7 +38,7 @@ if st.button(label="Start"):
     
   
     chrome_capabilities = webdriver.DesiredCapabilities.CHROME.copy()
-    chrome_capabilities['browserless.token'] = 'WR2t4sKXbSX0h_6C_MA'
+    chrome_capabilities['browserless.token'] = 'WR2t4sKXbSX0h'
     chrome_options = webdriver.ChromeOptions()
     chrome_options.add_argument('--headless')
     chrome_options.add_argument('--no-sandbox')
