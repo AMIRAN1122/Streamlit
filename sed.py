@@ -23,20 +23,31 @@ components.html(
     width=1000,
 )
 
-# if st.button(label="Start"):
+if st.button(label="Start"):
 
-#     chrome_options = webdriver.ChromeOptions()
-#     chrome_options.set_capability('browserless:token', 'SDflkgfhlslktydskhga')
+    chrome_options = webdriver.ChromeOptions()
+    chrome_options.set_capability('browserless:token', 'SDflkgfhlslktydskhga')
 
-#     chrome_options.add_argument("--no-sandbox")
-#     chrome_options.add_argument("--headless")
+    chrome_options.add_argument("--no-sandbox")
+    chrome_options.add_argument("--headless")
 
-#     driver = webdriver.Remote(
-#         command_executor='https://s-chrome.iran.liara.run/webdriver',
-#         options=chrome_options
-#     )
+    driver = webdriver.Remote(
+        command_executor='https://s-chrome.iran.liara.run/webdriver',
+        options=chrome_options
+    )
 
-#     driver.get("https://streamlit.iran.liara.run/")
+    driver.get("https://streamlit.iran.liara.run/")
+    
+    element = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CSS_SELECTOR, "a.yn-item-link")))
+    
+    linc = []
+
+    for link_element in link_elements:
+        link = link_element.get_attribute('href')
+        linc.append(link)
+        
+    st.write(linc[6])
+
     
 #     page_source = driver.page_source
     
