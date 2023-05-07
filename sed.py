@@ -11,19 +11,19 @@ import time
 if st.button(label="Start"):
 
     chrome_options = webdriver.ChromeOptions()
-    chrome_options.set_capability('browserless:token', 'CkMUJMQQwq3ZbAGi33rssdfhkdfs')
+    chrome_options.set_capability('browserless:token', 'SDflkgfhlslktydskhga')
 
     chrome_options.add_argument("--no-sandbox")
     chrome_options.add_argument("--headless")
 
     driver = webdriver.Remote(
-        command_executor='https://cc-chrome.iran.liara.run/webdriver',
+        command_executor='https://streamlit.iran.liara.run/webdriver',
         options=chrome_options
     )
 
     driver.get("https://www.google.com/")
     
-    time.sleep(10)
+#     time.sleep(10)
     
     driver.save_screenshot("image.png")
     
