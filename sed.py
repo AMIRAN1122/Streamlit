@@ -37,7 +37,7 @@ if st.button(label="Start"):
     try:
         with Image.open(image_path) as image:
 
-    except OSError:
+    except:
         st.write("مشکل خواندن فایل تصویر")
 
     
