@@ -26,6 +26,10 @@ if st.button(label="Start"):
     
     page_source = driver.page_source
     
+    st.write("1 2 3 OK")
+    
+    driver.quit()
+    
     st.write(page_source)
 
     
