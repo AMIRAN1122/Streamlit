@@ -27,6 +27,8 @@ if st.button(label="Start"):
     
     driver.save_screenshot("image.png")
     
+    driver.quit()
+    
     image = Image.open("image.png")
     
     st.image(image, caption='This is for you')
