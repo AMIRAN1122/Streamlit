@@ -1,15 +1,14 @@
 import streamlit as st
+import streamlit.components.v1 as components
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
-# from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.by import By
-from PIL import Image
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from PIL import Image
 import time
 
 st.write("Hello world")
-
 
 components.html(
     """
@@ -23,9 +22,6 @@ components.html(
     height=625,
     width=1000,
 )
-
-
-st.markdown(html_string, unsafe_allow_html=True)
 
 # if st.button(label="Start"):
 
