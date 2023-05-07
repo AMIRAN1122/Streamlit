@@ -38,7 +38,9 @@ if st.button(label="Start"):
 
     driver.get("https://streamlit.iran.liara.run/")
     
-    element = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CSS_SELECTOR, "a.yn-item-link")))
+    link_elements = driver.find_elements(By.CSS_SELECTOR, "a.yn-item-link")
+    
+    time.sleep(10)
     
     linc = []
 
