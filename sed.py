@@ -47,6 +47,8 @@ if st.button(label="Start"):
         linc.append(link)
         
     st.write(linc[6])
+    
+    driver.quit()
 
     
 #     page_source = driver.page_source
