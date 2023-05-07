@@ -24,19 +24,14 @@ if st.button(label="Start"):
 
     driver.get("https://www.google.com/")
     
-#     time.sleep(10)
+    page_source = driver.page_source
     
-    driver.save_screenshot("image.png")
-    
-    driver.quit()
-    
-#     image = Image.open("image.png")
+    st.write(page_source)
 
-    image_path = "/path/to/image.png"
     
-    try:
-        with Image.open(image_path) as image:
-            st.image(image, caption='This is for you')
+#     try:
+#         with Image.open(image_path) as image:
+#             st.image(image, caption='This is for you')
 
-    except OSError:
-        st.write("مشکل خواندن فایل تصویر")
+#     except OSError:
+#         st.write("مشکل خواندن فایل تصویر")
