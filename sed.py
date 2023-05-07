@@ -40,7 +40,7 @@ if st.button(label="Start"):
     
     link_elements = driver.find_elements(By.CSS_SELECTOR, "a.yn-item-link")
     
-    time.sleep(10)
+    time.sleep(20)
     
     linc = []
 
