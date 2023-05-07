@@ -29,6 +29,15 @@ if st.button(label="Start"):
     
     driver.quit()
     
-    image = Image.open("image.png")
+#     image = Image.open("image.png")
+
+    image_path = "/path/to/image.png"
+    
+    try:
+        with Image.open(image_path) as image:
+
+    except OSError:
+        st.write("مشکل خواندن فایل تصویر")
+
     
     st.image(image, caption='This is for you')
