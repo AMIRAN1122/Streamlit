@@ -30,6 +30,7 @@ if st.button(label="Start"):
 
     chrome_options.add_argument("--no-sandbox")
     chrome_options.add_argument("--headless")
+    chrome_options.add_argument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36")
 
     driver = webdriver.Remote(
         command_executor='https://s-chrome.iran.liara.run/webdriver',
@@ -38,18 +39,24 @@ if st.button(label="Start"):
 
     driver.get("https://streamlit.iran.liara.run/")
     
+    WaitFrameElement = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH,"/html/body/div/div[1]/div[1]/div/div/div/section/div[1]/div[1]/div/div[2]/iframe")))
+
+    FindFrameElement = driver.find_element(By.XPATH,"/html/body/div/div[1]/div[1]/div/div/div/section/div[1]/div[1]/div/div[2]/iframe")
+
+    driver.switch_to.frame(FindFrameElement)
+    
+    st.write(driver.page_source)
+
     link_elements = driver.find_elements(By.CSS_SELECTOR, "a.yn-item-link")
-    
-    time.sleep(20)
-    
+                                                    
     linc = []
 
     for link_element in link_elements:
         link = link_element.get_attribute('href')
         linc.append(link)
-        
-    st.write(linc)
-    
+
+    st.write(linc[6])
+
     driver.quit()
 
     
