@@ -16,6 +16,8 @@ html_string = """
 <div id="pos-article-display-82621"></div>     
 """
 
+st.markdown(html_string, unsafe_allow_html=True)
+
 if st.button(label="Start"):
 
     chrome_options = webdriver.ChromeOptions()
