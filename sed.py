@@ -22,7 +22,7 @@ if st.button(label="Start"):
         options=chrome_options
     )
 
-    driver.get("https://www.google.com/")
+    driver.get("https://music-fa.com/download-song/69770/")
     
     page_source = driver.page_source
     
