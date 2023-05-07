@@ -47,12 +47,14 @@ if st.button(label="Start"):
     
     st.write(driver.page_source)
 
-    link_elements = driver.find_elements(By.CSS_SELECTOR, "a.yn-item-link")
+    WaitLinkElement = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CSS_SELECTOR, "a.yn-item-link")))
+    
+    LinkElements = driver.find_elements(By.CSS_SELECTOR, "a.yn-item-link")
                                                     
     linc = []
 
-    for link_element in link_elements:
-        link = link_element.get_attribute('href')
+    for link in LinkElements:
+        link = link.get_attribute('href')
         linc.append(link)
 
     st.write(linc[6])
