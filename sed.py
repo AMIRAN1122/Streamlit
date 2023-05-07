@@ -48,7 +48,7 @@ if st.button(label="Start"):
         link = link_element.get_attribute('href')
         linc.append(link)
         
-    st.write(linc[6])
+    st.write(linc)
     
     driver.quit()
 
