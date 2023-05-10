@@ -23,7 +23,7 @@ EXPOSE 8501
 
 COPY . .
 
-CMD [ "streamlit", "run", "sed.py"]
+CMD [ "streamlit", "run", "rrr.py"]
 
 # -------------------
 
