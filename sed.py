@@ -23,6 +23,20 @@ st.write("Hello world")
 #     width=1000,
 # )
 
+components.html(
+    """
+    <head>
+    <!---start GOFTINO code--->
+    <script type="text/javascript">
+      !function(){var i="WRQwit",a=window,d=document;function g(){var g=d.createElement("script"),s="https://www.goftino.com/widget/"+i,l=localStorage.getItem("goftino_"+i);g.async=!0,g.src=l?s+"?o="+l:s;d.getElementsByTagName("head")[0].appendChild(g);}"complete"===d.readyState?g():a.attachEvent?a.attachEvent("onload",g):a.addEventListener("load",g,!1);}();
+    </script>
+    <!---end GOFTINO code--->
+    </head> 
+    """,
+    height=625,
+    width=1000,
+)
+
 # if st.button(label="Start"):
 
 #     chrome_options = webdriver.ChromeOptions()
