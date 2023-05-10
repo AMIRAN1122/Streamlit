@@ -3,7 +3,7 @@ import streamlit.components.v1 as components
 
 st.write("Hello world")
 
-col1, col2, col3 = st.columns(1,3,1)
+col1, col2, col3 = st.columns([1,3,1])
 
 with col1:
     st.write("")
