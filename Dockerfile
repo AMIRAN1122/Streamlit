@@ -23,7 +23,6 @@ EXPOSE 8501
 
 COPY . .
 
-CMD [ "streamlit", "run", "Runflare"]
+CMD [ "streamlit", "run", "rrr.py"]
 
 # -------------------
-
