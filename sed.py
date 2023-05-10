@@ -33,8 +33,6 @@ components.html(
     <!---end GOFTINO code--->
     </footer> 
     """,
-    height=625,
-    width=1000,
 )
 
 # if st.button(label="Start"):
