@@ -23,6 +23,6 @@ EXPOSE 8501
 
 COPY . .
 
-CMD [ "streamlit", "run", "rrr.py"]
+CMD [ "streamlit", "run", "home.py"]
 
 # -------------------
