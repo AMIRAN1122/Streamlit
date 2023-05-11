@@ -20,7 +20,7 @@ with col2:
         </head> 
         """,
         height=625,
-        width=1000,
+        width=625,
     )
     
 with col3:
