@@ -20,74 +20,76 @@ st.set_page_config(
 
 st.write("# Welcome to Streamlit! 👋")
 
-UserAgent = generate_user_agent(os=("win", "mac", "android"))
+st.write("## Coming Soon")
 
-if st.button(label="Start"):
+# UserAgent = generate_user_agent(os=("win", "mac", "android"))
 
-    chrome_options = webdriver.ChromeOptions()
-    chrome_options.set_capability('browserless:token', 'SDflkgfhlslktydskhga')
+# if st.button(label="Start"):
 
-    chrome_options.add_argument("--no-sandbox")
-    chrome_options.add_argument("--headless")
-    chrome_options.add_argument(f"user-agent={UserAgent}")
+#     chrome_options = webdriver.ChromeOptions()
+#     chrome_options.set_capability('browserless:token', 'SDflkgfhlslktydskhga')
 
-    driver = webdriver.Remote(
-        command_executor='https://s-chrome.iran.liara.run/webdriver',
-        options=chrome_options
-    )
+#     chrome_options.add_argument("--no-sandbox")
+#     chrome_options.add_argument("--headless")
+#     chrome_options.add_argument(f"user-agent={UserAgent}")
 
-    driver.get("https://streamlit.iran.liara.run/")
+#     driver = webdriver.Remote(
+#         command_executor='https://s-chrome.iran.liara.run/webdriver',
+#         options=chrome_options
+#     )
+
+#     driver.get("https://streamlit.iran.liara.run/")
     
-    try:
-        WaitFrameElement = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH,"/html/body/div/div[1]/div[1]/div/div/div/section/div[1]/div[1]/div/div[2]/iframe")))
+#     try:
+#         WaitFrameElement = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH,"/html/body/div/div[1]/div[1]/div/div/div/section/div[1]/div[1]/div/div[2]/iframe")))
         
-        FindFrameElement = driver.find_element(By.XPATH,"/html/body/div/div[1]/div[1]/div/div/div/section/div[1]/div[1]/div/div[2]/iframe")
+#         FindFrameElement = driver.find_element(By.XPATH,"/html/body/div/div[1]/div[1]/div/div/div/section/div[1]/div[1]/div/div[2]/iframe")
 
-        driver.switch_to.frame(FindFrameElement)
+#         driver.switch_to.frame(FindFrameElement)
 
-        st.write(driver.page_source)
+#         st.write(driver.page_source)
         
-    except NoSuchElementException:
-        driver.quit()
+#     except NoSuchElementException:
+#         driver.quit()
         
-    except TimeoutException:
-        driver.quit()
+#     except TimeoutException:
+#         driver.quit()
         
-    except ElementNotInteractableException:
-        driver.quit()
+#     except ElementNotInteractableException:
+#         driver.quit()
        
-    except WebDriverException:
-        driver.quit()
+#     except WebDriverException:
+#         driver.quit()
         
-    try:
-        WaitLinkElement = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CSS_SELECTOR, "a.yn-item-link")))
+#     try:
+#         WaitLinkElement = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CSS_SELECTOR, "a.yn-item-link")))
 
-        LinkElements = driver.find_elements(By.CSS_SELECTOR, "a.yn-item-link")
+#         LinkElements = driver.find_elements(By.CSS_SELECTOR, "a.yn-item-link")
         
-    except NoSuchElementException:
-        driver.quit()
+#     except NoSuchElementException:
+#         driver.quit()
         
-    except TimeoutException:
-        driver.quit()
+#     except TimeoutException:
+#         driver.quit()
         
-    except ElementNotInteractableException:
-        driver.quit()
+#     except ElementNotInteractableException:
+#         driver.quit()
        
-    except WebDriverException:
-        driver.quit()
+#     except WebDriverException:
+#         driver.quit()
         
-    AdLinc = []
+#     AdLinc = []
 
-    for link in LinkElements:
-        link = link.get_attribute('href')
-        AdLinc.append(link)
+#     for link in LinkElements:
+#         link = link.get_attribute('href')
+#         AdLinc.append(link)
 
-    AdIndexList = [6, 7, 8, 9, 10, 11]
+#     AdIndexList = [6, 7, 8, 9, 10, 11]
     
-    AdIndex = random.choice(AdIndexList)
+#     AdIndex = random.choice(AdIndexList)
     
-    st.write(AdIndex)
+#     st.write(AdIndex)
     
-    st.write(AdLinc[AdIndex])
+#     st.write(AdLinc[AdIndex])
 
-    driver.quit()
+#     driver.quit()
