@@ -20,8 +20,6 @@ st.set_page_config(
 
 st.write("# Welcome to Streamlit! 👋")
 
-st.sidebar.success("Select a demo above.")
-
 UserAgent = generate_user_agent(os=("win", "mac", "android"))
 
 if st.button(label="Start"):
