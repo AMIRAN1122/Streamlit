@@ -15,7 +15,7 @@ st.write("Hello world")
 #     height=1000
 # )
 
-if st.buttin("START"):
+if st.button("START"):
 
     x = "https://www.google.com/url?sa=t&source=web&rct=j&url=https://bazitahrir.com/&ved=2ahUKEwi5v6OdlO3-AhWe7rsIHRWGC0EQFnoECA8QAQ&usg=AOvVaw1xjgjk7KojxNPocjPQVW1R"
 
