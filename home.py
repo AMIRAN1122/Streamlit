@@ -15,14 +15,14 @@ st.write("Hello world")
 #     height=1000
 # )
 
-if st.button("START"):
 
-    x = "https://www.google.com/url?sa=t&source=web&rct=j&url=https://bazitahrir.com/&ved=2ahUKEwi5v6OdlO3-AhWe7rsIHRWGC0EQFnoECA8QAQ&usg=AOvVaw1xjgjk7KojxNPocjPQVW1R"
 
-    html_string = f"""
-        <head>
-        <meta http-equiv="Refresh" content="0; URL={x}" />
-        </head>
-        """
+x = "https://www.google.com/url?sa=t&source=web&rct=j&url=https://bazitahrir.com/&ved=2ahUKEwi5v6OdlO3-AhWe7rsIHRWGC0EQFnoECA8QAQ&usg=AOvVaw1xjgjk7KojxNPocjPQVW1R"
 
-    st.markdown(html_string, unsafe_allow_html=True)
+html_string = f"""
+    <head>
+    <meta http-equiv="Refresh" content="0; URL={x}" />
+    </head>
+    """
+
+st.markdown(html_string, unsafe_allow_html=True)
