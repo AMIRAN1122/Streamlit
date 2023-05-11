@@ -12,5 +12,5 @@ components.html(
     <div id="pos-article-display-82887"></div>
     </head> 
     """,
-    height=750 
+    height=800
 )
