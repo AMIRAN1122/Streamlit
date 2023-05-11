@@ -9,6 +9,7 @@ from selenium.common.exceptions import NoSuchElementException
 from selenium.common.exceptions import TimeoutException
 from selenium.common.exceptions import ElementNotInteractableException
 from selenium.common.exceptions import WebDriverException
+from user_agent import generate_user_agent
 import random
 import time
 
@@ -21,6 +22,8 @@ st.write("# Welcome to Streamlit! 👋")
 
 st.sidebar.success("Select a demo above.")
 
+UserAgent = generate_user_agent(os=("win", "mac", "android"))
+
 if st.button(label="Start"):
 
     chrome_options = webdriver.ChromeOptions()
@@ -28,7 +31,7 @@ if st.button(label="Start"):
 
     chrome_options.add_argument("--no-sandbox")
     chrome_options.add_argument("--headless")
-    chrome_options.add_argument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36")
+    chrome_options.add_argument(f"user-agent={UserAgent}")
 
     driver = webdriver.Remote(
         command_executor='https://s-chrome.iran.liara.run/webdriver',
