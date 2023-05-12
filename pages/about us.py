@@ -51,15 +51,19 @@ if st.button(label="Start"):
         
     except NoSuchElementException:
         driver.quit()
+        st.write("NoSuchElementException")
         
     except TimeoutException:
         driver.quit()
+        st.write("TimeoutException")
         
     except ElementNotInteractableException:
         driver.quit()
+        st.write("ElementNotInteractableException")
        
     except WebDriverException:
         driver.quit()
+        st.write("WebDriverException")
         
     try:
         WaitLinkElement = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CSS_SELECTOR, "a.yn-item-link")))
