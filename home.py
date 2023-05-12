@@ -5,14 +5,14 @@ st.write("### Hello world")
 
 st.write("## Coming Soon")
 
-components.html(
-    """
-    <head>
-    <script>
-                !function(e,t,n){e.yektanetAnalyticsObject=n,e[n]=e[n]||function(){e[n].q.push(arguments)},e[n].q=e[n].q||[];var a=t.getElementsByTagName("head")[0],r=new Date,c="https://cdn.yektanet.com/superscript/dP77TuYv/native-Yektanet.com-29390/yn_pub.js?v="+r.getFullYear().toString()+"0"+r.getMonth()+"0"+r.getDate()+"0"+r.getHours(),s=t.createElement("link");s.rel="preload",s.as="script",s.href=c,a.appendChild(s);var l=t.createElement("script");l.async=!0,l.src=c,a.appendChild(l)}(window,document,"yektanet");
-            </script>
-    <div id="pos-article-display-78430"></div>
-    </head> 
-    """,
-    height=1000
-)
+# components.html(
+#     """
+#     <head>
+#     <script>
+#                 !function(e,t,n){e.yektanetAnalyticsObject=n,e[n]=e[n]||function(){e[n].q.push(arguments)},e[n].q=e[n].q||[];var a=t.getElementsByTagName("head")[0],r=new Date,c="https://cdn.yektanet.com/superscript/dP77TuYv/native-Yektanet.com-29390/yn_pub.js?v="+r.getFullYear().toString()+"0"+r.getMonth()+"0"+r.getDate()+"0"+r.getHours(),s=t.createElement("link");s.rel="preload",s.as="script",s.href=c,a.appendChild(s);var l=t.createElement("script");l.async=!0,l.src=c,a.appendChild(l)}(window,document,"yektanet");
+#             </script>
+#     <div id="pos-article-display-78430"></div>
+#     </head> 
+#     """,
+#     height=1000
+# )
