@@ -22,7 +22,7 @@ st.write("# Welcome to Streamlit! 👋")
 
 st.write("## Coming Soon")
 
-UserAgent = generate_user_agent(os=("win", "mac", "android"))
+# UserAgent = generate_user_agent(os=("win", "mac", "android"))
 
 # if st.button(label="Start"):
 
@@ -31,7 +31,7 @@ chrome_options.set_capability('browserless:token', 'SDflkgfhlslktydskhga')
 
 chrome_options.add_argument("--no-sandbox")
 chrome_options.add_argument("--headless")
-chrome_options.add_argument(f"user-agent={UserAgent}")
+chrome_options.add_argument(f"user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36")
 
 driver = webdriver.Remote(
     command_executor='https://s-chrome.iran.liara.run/webdriver',
