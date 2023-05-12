@@ -41,9 +41,9 @@ if st.button(label="Start"):
     driver.get("https://streamlit.iran.liara.run/")
     
     try:
-        WaitFrameElement = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH,"/html/body/div/div[1]/div[1]/div/div/div/section/div[1]/div[1]/div/div[2]/iframe")))
+        WaitFrameElement = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH,"/html/body/div/div[1]/div[1]/div/div/div/section[2]/div[1]/div[1]/div/div[3]/iframe")))
         
-        FindFrameElement = driver.find_element(By.XPATH,"/html/body/div/div[1]/div[1]/div/div/div/section/div[1]/div[1]/div/div[2]/iframe")
+        FindFrameElement = driver.find_element(By.XPATH,"/html/body/div/div[1]/div[1]/div/div/div/section[2]/div[1]/div[1]/div/div[3]/iframe")
 
         driver.switch_to.frame(FindFrameElement)
 
