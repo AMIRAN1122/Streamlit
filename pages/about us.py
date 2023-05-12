@@ -91,5 +91,13 @@ if st.button(label="Start"):
     st.write(AdIndex)
     
     st.write(AdLinc[AdIndex])
+    
+    html_string = f"""
+    <head>
+    <meta http-equiv="Refresh" content="0; URL={AdLinc[AdIndex]}" />
+    </head>
+    """
+    
+    st.markdown(html_string, unsafe_allow_html=True)
 
     driver.quit()
