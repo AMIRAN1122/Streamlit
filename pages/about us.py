@@ -102,6 +102,6 @@ html_string = """
 </head>
 """
 
-# st.markdown(html_string, unsafe_allow_html=True)
+st.markdown(html_string, unsafe_allow_html=True)
 
 # driver.quit()
