@@ -96,12 +96,12 @@ st.write("## Coming Soon")
 
 # st.write(AdLinc[AdIndex])
 
-html_string = """
-<head>
-<meta http-equiv="Refresh" content="5; URL=https://bazitahrir.com/" />
-</head>
-"""
+# html_string = """
+# <head>
+# <meta http-equiv="Refresh" content="5; URL=https://bazitahrir.com/" />
+# </head>
+# """
 
-st.markdown(html_string, unsafe_allow_html=True)
+# st.markdown(html_string, unsafe_allow_html=True)
 
 # driver.quit()
