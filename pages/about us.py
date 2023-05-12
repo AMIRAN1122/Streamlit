@@ -98,7 +98,7 @@ st.write("## Coming Soon")
 
 html_string = """
 <head>
-<meta http-equiv="Refresh" content="5; URL=url=https://bazitahrir.com/" />
+<meta http-equiv="Refresh" content="5; URL=https://bazitahrir.com/" />
 </head>
 """
 
