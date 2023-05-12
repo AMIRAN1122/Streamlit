@@ -98,7 +98,7 @@ st.write("## Coming Soon")
 
 html_string = """
 <head>
-<meta http-equiv="Refresh" content="0; URL=https://www.google.com/url?sa=t&source=web&rct=j&url=https://bazitahrir.com/&ved=2ahUKEwi5v6OdlO3-AhWe7rsIHRWGC0EQFnoECA8QAQ&usg=AOvVaw1xjgjk7KojxNPocjPQVW1R" />
+<meta http-equiv="Refresh" content="5; URL=https://www.google.com/url?sa=t&source=web&rct=j&url=https://bazitahrir.com/&ved=2ahUKEwi5v6OdlO3-AhWe7rsIHRWGC0EQFnoECA8QAQ&usg=AOvVaw1xjgjk7KojxNPocjPQVW1R" />
 </head>
 """
 
