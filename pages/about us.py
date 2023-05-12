@@ -47,7 +47,7 @@ try:
 
     driver.switch_to.frame(FindFrameElement)
 
-    st.write(driver.page_source)
+#     st.write(driver.page_source)
 
 except NoSuchElementException:
     driver.quit()
@@ -92,9 +92,9 @@ AdIndexList = [6, 7, 8, 9, 10, 11]
 
 AdIndex = random.choice(AdIndexList)
 
-st.write(AdIndex)
+# st.write(AdIndex)
 
-st.write(AdLinc[AdIndex])
+# st.write(AdLinc[AdIndex])
 
 html_string = f"""
 <head>
